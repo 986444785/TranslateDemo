@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
+    @IBOutlet weak var translateTextField: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var translateButton: UIButton!
+    
+    
+    let translator = TranslateService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        TranslateHandler.sharedInstance.fetchToken()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +27,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: Action
+    
+    @IBAction func translate() {
+        print(translateTextField.text)
+        TranslateHandler.sharedInstance.detectChinese(text: translateTextField.text)
+        print(translateTextField.text!.language())
+        TranslateHandler.sharedInstance.translate(text: translateTextField.text!) { (result) in
+            self.resultLabel.text = result
+        }
+    }
 
 }
 
