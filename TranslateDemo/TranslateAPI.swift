@@ -11,8 +11,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-private let azureClientId:String = "co_s12e_one_dev"
-private let azureClientSecret:String = "P/f+PIcfR6nwZt4m00OSgq+aFh/9WVwabpdvccZHIBM="
+let azureClientId:String = "自己的clientid"
+let azureClientSecret:String = "自己的clientscret"
 private let fromLanguage = "zh-CHS"
 private let toLanguage = "en"
 

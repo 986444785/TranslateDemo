@@ -19,7 +19,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        TranslateHandler.sharedInstance.fetchToken()
+       // TranslateHandler.sharedInstance.fetchToken()
+        translator.fetchBingToken()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,9 +32,12 @@ class ViewController: UIViewController {
     
     @IBAction func translate() {
         print(translateTextField.text)
-        TranslateHandler.sharedInstance.detectChinese(text: translateTextField.text)
-        print(translateTextField.text!.language())
-        TranslateHandler.sharedInstance.translate(text: translateTextField.text!) { (result) in
+//        TranslateHandler.sharedInstance.detectChinese(text: translateTextField.text)
+//        print(translateTextField.text!.language())
+//        TranslateHandler.sharedInstance.translate(text: translateTextField.text!) { (result) in
+//            self.resultLabel.text = result
+//        }
+        translator.convert(text: translateTextField.text!) { (result) in
             self.resultLabel.text = result
         }
     }

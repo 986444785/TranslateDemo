@@ -15,6 +15,12 @@
 		4003D50B1DAB7EFC00E574B7 /* TranslateDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003D50A1DAB7EFC00E574B7 /* TranslateDemoTests.swift */; };
 		4003D5161DAB7EFC00E574B7 /* TranslateDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003D5151DAB7EFC00E574B7 /* TranslateDemoUITests.swift */; };
 		4003D5241DAB7F8B00E574B7 /* TranslateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4003D5231DAB7F8B00E574B7 /* TranslateService.swift */; };
+		401694AE1DAD1AE2004CB776 /* RuntimeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694AD1DAD1AE2004CB776 /* RuntimeHelper.swift */; };
+		401694B01DAD1AF3004CB776 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694AF1DAD1AF3004CB776 /* Test.swift */; };
+		401694B21DAD222D004CB776 /* ShoppingMallAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694B11DAD222D004CB776 /* ShoppingMallAPI.swift */; };
+		401694B41DAD2232004CB776 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694B31DAD2232004CB776 /* File.swift */; };
+		401694B61DAD224A004CB776 /* SelfInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694B51DAD224A004CB776 /* SelfInfoAPI.swift */; };
+		401694B81DAD2256004CB776 /* CommunityAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401694B71DAD2256004CB776 /* CommunityAPI.swift */; };
 		4087612D1DAB9894008378DB /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4087612C1DAB9894008378DB /* XMLDictionary.m */; };
 		4087612F1DAC8702008378DB /* TranslateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087612E1DAC8702008378DB /* TranslateAPI.swift */; };
 		4087613B1DACC738008378DB /* TextDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4087613A1DACC738008378DB /* TextDrawable.swift */; };
@@ -61,6 +67,12 @@
 		4003D5151DAB7EFC00E574B7 /* TranslateDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateDemoUITests.swift; sourceTree = "<group>"; };
 		4003D5171DAB7EFC00E574B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4003D5231DAB7F8B00E574B7 /* TranslateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateService.swift; sourceTree = "<group>"; };
+		401694AD1DAD1AE2004CB776 /* RuntimeHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuntimeHelper.swift; sourceTree = "<group>"; };
+		401694AF1DAD1AF3004CB776 /* Test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		401694B11DAD222D004CB776 /* ShoppingMallAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingMallAPI.swift; sourceTree = "<group>"; };
+		401694B31DAD2232004CB776 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		401694B51DAD224A004CB776 /* SelfInfoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfInfoAPI.swift; sourceTree = "<group>"; };
+		401694B71DAD2256004CB776 /* CommunityAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityAPI.swift; sourceTree = "<group>"; };
 		4087612A1DAB9893008378DB /* TranslateDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TranslateDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		4087612B1DAB9894008378DB /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		4087612C1DAB9894008378DB /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
@@ -130,7 +142,13 @@
 				4003D4F71DAB7EFC00E574B7 /* ViewController.swift */,
 				4087613A1DACC738008378DB /* TextDrawable.swift */,
 				4003D5231DAB7F8B00E574B7 /* TranslateService.swift */,
+				401694AD1DAD1AE2004CB776 /* RuntimeHelper.swift */,
+				401694AF1DAD1AF3004CB776 /* Test.swift */,
 				4087612E1DAC8702008378DB /* TranslateAPI.swift */,
+				401694B11DAD222D004CB776 /* ShoppingMallAPI.swift */,
+				401694B31DAD2232004CB776 /* File.swift */,
+				401694B51DAD224A004CB776 /* SelfInfoAPI.swift */,
+				401694B71DAD2256004CB776 /* CommunityAPI.swift */,
 				4003D4F91DAB7EFC00E574B7 /* Main.storyboard */,
 				4003D4FC1DAB7EFC00E574B7 /* Assets.xcassets */,
 				4003D4FE1DAB7EFC00E574B7 /* LaunchScreen.storyboard */,
@@ -449,9 +467,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4003D5241DAB7F8B00E574B7 /* TranslateService.swift in Sources */,
+				401694AE1DAD1AE2004CB776 /* RuntimeHelper.swift in Sources */,
+				401694B61DAD224A004CB776 /* SelfInfoAPI.swift in Sources */,
 				4087612D1DAB9894008378DB /* XMLDictionary.m in Sources */,
 				4087612F1DAC8702008378DB /* TranslateAPI.swift in Sources */,
 				4003D4F81DAB7EFC00E574B7 /* ViewController.swift in Sources */,
+				401694B41DAD2232004CB776 /* File.swift in Sources */,
+				401694B21DAD222D004CB776 /* ShoppingMallAPI.swift in Sources */,
+				401694B81DAD2256004CB776 /* CommunityAPI.swift in Sources */,
+				401694B01DAD1AF3004CB776 /* Test.swift in Sources */,
 				4087613B1DACC738008378DB /* TextDrawable.swift in Sources */,
 				4003D4F61DAB7EFC00E574B7 /* AppDelegate.swift in Sources */,
 			);

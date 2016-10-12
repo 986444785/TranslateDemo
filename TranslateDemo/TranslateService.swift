@@ -9,13 +9,12 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-import AEXML
 
 class TranslateService: NSObject {
-    let azureClientId:String = "co_s12e_one_dev"
-    let azureClientSecret:String = "P/f+PIcfR6nwZt4m00OSgq+aFh/9WVwabpdvccZHIBM="
+    let azureClientId:String = "自己的clientid"
+    let azureClientSecret:String = "自己的clientscret"
     let tokenURL = "https://datamarket.accesscontrol.windows.net/v2/OAuth2-13/"
-
+    
     var token:String?
     var expire:NSDate?
     
@@ -33,7 +32,9 @@ class TranslateService: NSObject {
             case .success(let value):
                 print(value)
                 if let json = value as? Dictionary<String, Any> {
-                    self.token = json["access_token"] as! String
+                    if let value = json["access_token"] {
+                        self.token = value as? String
+                    }
                     let timeInterval = json["expires_in"] as! NSString
                     self.expire = NSDate.init(timeInterval: TimeInterval(timeInterval.floatValue), since: NSDate() as Date)
                 }
@@ -45,6 +46,10 @@ class TranslateService: NSObject {
     
     func convert(text:String, completion: @escaping (String) -> ()) {
         let base = "https://api.microsofttranslator.com/V2/Http.svc/Translate"
+        guard let tokenExist = token else{
+            print("token not exist")
+            return
+        }
         let header = ["Authorization": "bearer \(self.token!)"]
         
         let body = ["to": to,
